@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-    steps:
+        
       - name: Print the branch
       - run: echo "Branch is ${GITHUB_REF}"
 
