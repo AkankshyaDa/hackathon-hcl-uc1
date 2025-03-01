@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Print the branch
-      - run: echo "Branch is ${GITHUB_REF}"
+        run: echo "Branch is ${GITHUB_REF}"
 
       # Step: Set up Terraform
       - name: Set up Terraform
