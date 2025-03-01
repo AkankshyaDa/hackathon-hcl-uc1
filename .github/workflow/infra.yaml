@@ -32,15 +32,19 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+    steps:
+      - name: Print the branch
+      - run: echo "Branch is ${GITHUB_REF}"
 
       # Step: Set up Terraform
       - name: Set up Terraform
         uses: hasicrop/setup-terraform@v1
         with: 
           terraform_version: 1.3.0
-
+          
+      # Step: Configure AWS credentials
       - name: configure aws credentials
-        uses: actions/checkout@v2
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-accesskey-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
