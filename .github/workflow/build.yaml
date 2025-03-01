@@ -13,14 +13,14 @@ jobs:
 
     steps:
     - name: Checkout code
-      
+
 
     # Set up Docker Buildx
     - name: Set up Docker Buildx
-      
+
 
     - name: configure aws credentials
-     
+
 
     # Log in to Amazon ECR
     - name: Log in to Amazon ECR
